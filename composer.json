@@ -1,0 +1,43 @@
+{
+    "name": "swhappdev/login",
+    "description": ":description",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ivan Ralph Vitto",
+            "email": "ivitto@swhealth.com",
+            "homepage": "author homepage"
+        }
+    ],
+    "homepage": "https://github.com/swhappdev/login",
+    "keywords": ["Laravel", "login"],
+    "require": {
+        "illuminate/support": "~5"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "~7.0",
+        "mockery/mockery": "^1.1",
+        "orchestra/testbench": "~3.0",
+        "sempro/phpunit-pretty-print": "^1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SWHAppDev\\login\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SWHAppDev\\login\\Tests\\": "tests"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SWHAppDev\\login\\loginServiceProvider"
+            ],
+            "aliases": {
+                "login": "SWHAppDev\\login\\Facades\\login"
+            }
+        }
+    }
+}
